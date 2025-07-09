@@ -13,7 +13,7 @@ function convertToObject(sourceString) {
     .map((item) => item.split(':'))
     .filter(([key, value]) => key && value !== undefined)
     .reduce((acc, [key, value]) => {
-      acc[key.trim()] = value.trimStart();
+      acc[key.trim()] = value.trim();
 
       return acc;
     }, {});
